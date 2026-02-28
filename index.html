@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kimani Kim Splash</title>
+  <style>
+    :root {
+      --teal: #11d8c5;
+      --violet: #7f5bff;
+      --deep: #080b16;
+      --glow: #8ef6ec;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(17, 216, 197, 0.35), transparent 35%),
+        radial-gradient(circle at 80% 30%, rgba(127, 91, 255, 0.25), transparent 30%),
+        linear-gradient(165deg, #06070f, #0d1230 55%, #05060d);
+      color: white;
+      overflow: hidden;
+    }
+
+    .card {
+      position: relative;
+      width: min(92vw, 430px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 28px;
+      padding: 2.4rem 1.8rem;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+      backdrop-filter: blur(8px);
+      box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+        0 20px 60px rgba(0,0,0,0.55),
+        0 0 70px rgba(17, 216, 197, 0.25);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .ring {
+      width: 88px;
+      height: 88px;
+      margin: 0 auto 1.3rem;
+      border-radius: 50%;
+      border: 4px solid rgba(255, 255, 255, 0.15);
+      border-top-color: var(--teal);
+      border-right-color: var(--violet);
+      animation: spin 2.5s linear infinite;
+      box-shadow: 0 0 28px rgba(142, 246, 236, 0.5);
+    }
+
+    .brand {
+      letter-spacing: 0.36rem;
+      text-transform: uppercase;
+      color: #a7fffb;
+      font-size: 0.75rem;
+      margin-bottom: 0.5rem;
+      opacity: 0.9;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 7vw, 2.75rem);
+      letter-spacing: 0.08rem;
+      text-transform: capitalize;
+      background: linear-gradient(90deg, #d6fffc, #b8bcff, #8ef6ec);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.8rem;
+    }
+
+    .welcome {
+      font-size: 1.1rem;
+      letter-spacing: 0.08rem;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+      color: #ffffff;
+      text-shadow: 0 0 18px rgba(255,255,255,0.4);
+    }
+
+    .dev {
+      font-size: 0.92rem;
+      opacity: 0.88;
+      color: #d0d6ff;
+      letter-spacing: 0.03rem;
+    }
+
+    .pulse {
+      position: absolute;
+      inset: auto 50% -65px;
+      translate: -50% 0;
+      width: 220px;
+      height: 80px;
+      background: radial-gradient(closest-side, rgba(142, 246, 236, 0.45), rgba(142,246,236,0));
+      filter: blur(8px);
+      pointer-events: none;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+  </style>
+</head>
+<body>
+  <section class="card" aria-label="Kimani Kim splash screen">
+    <div class="ring" aria-hidden="true"></div>
+    <p class="brand">Techno Camon 19 Style</p>
+    <h1>Kimani Kim</h1>
+    <p class="welcome">Welcome</p>
+    <p class="dev">Developed by Musyoki</p>
+    <div class="pulse" aria-hidden="true"></div>
+  </section>
+</body>
+</html>
